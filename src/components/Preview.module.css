@@ -1,0 +1,11 @@
+.preview {
+   width: 100%;
+   text-align: center;
+}
+.preview Button {
+   font-weight: bold;
+   text-align: center;
+   width: 150px;
+   margin: 0 13px;
+   padding: 10px 30px;
+}

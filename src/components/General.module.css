@@ -1,0 +1,31 @@
+.cell {
+   display: flex;
+   align-items: center;
+   color: #334;
+}
+.cell.invalid {
+   color: red;
+}
+h2 {
+   color: #e91e63;
+   text-align: center;
+   margin: 0 auto 12px;
+}
+
+label {
+   width: 160px;
+   font-size: 1.1rem;
+   margin: 5px 0;
+}
+
+input {
+   border-radius: 5px;
+   outline: none;
+   border: none;
+   border: 1px solid #e91e63;
+   caret-color: #e91e63;
+   padding: 2px 5px;
+}
+input:focus {
+   background-color: rgba(255, 192, 203, 0.541);
+}

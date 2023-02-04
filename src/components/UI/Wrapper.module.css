@@ -1,0 +1,19 @@
+.wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 26px;
+   justify-content: center;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   padding-bottom: 3rem;
+}
+.wrapper h1 {
+   width: 100%;
+   text-align: center;
+   color: #ffffffa1;
+   font-size: 3rem;
+   font-weight: bold;
+   letter-spacing: -3px;
+   text-shadow: 0 1px 4px #fff;
+   user-select: none;
+}
