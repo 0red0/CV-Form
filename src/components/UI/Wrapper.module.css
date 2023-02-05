@@ -6,6 +6,13 @@
    padding-left: 1.5rem;
    padding-right: 1.5rem;
    padding-bottom: 3rem;
+   background: rgb(134, 168, 231);
+   background: radial-gradient(
+      circle,
+      rgba(134, 168, 231, 1) 2%,
+      rgba(51, 51, 68, 1) 58%
+   );
+   position: relative;
 }
 .wrapper h1 {
    width: 100%;

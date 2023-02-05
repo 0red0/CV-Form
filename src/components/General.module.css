@@ -1,10 +1,12 @@
 .cell {
    display: flex;
    align-items: center;
+   justify-content: center;
    color: #334;
 }
 .cell.invalid {
    color: red;
+   font-weight: 500;
 }
 h2 {
    color: #e91e63;
@@ -18,7 +20,8 @@ label {
    margin: 5px 0;
 }
 
-input {
+input:not(input[name="comm"]) {
+   width: 160px;
    border-radius: 5px;
    outline: none;
    border: none;
