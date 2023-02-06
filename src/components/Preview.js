@@ -5,7 +5,7 @@ export default function Preview(props) {
    return (
       <div className={styles.preview}>
          <Button onClick={props.onClick}>Preview</Button>
-         <Button>Clear</Button>
+         <Button onClick={props.onClear}>Clear all</Button>
       </div>
    );
 }

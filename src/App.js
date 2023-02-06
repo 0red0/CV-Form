@@ -10,6 +10,7 @@ import { useState } from "react";
 function App() {
    const [over, setOver] = useState(false);
    const [data, setData] = useState({});
+   const [clearOn, setClearOn] = useState(false);
 
    function overHandler() {
       setOver(true);
@@ -20,6 +21,16 @@ function App() {
          setOver(false);
       }
    }
+
+   function clearHandler() {
+      // console.log(clearOn);
+      setClearOn(true);
+      // console.log("clering");
+      // console.log(clearOn);
+   }
+   // onClear={clearFields}
+   // onClear={clearHandler}
+   //
 
    function generalInfo(n, a, p, e) {
       setData({ ...data, name: n, age: a, phone: p, email: e });
@@ -38,11 +49,11 @@ function App() {
    return (
       <Wrapper>
          <h1>CV - FORM</h1>
-         <General onDataPrep={generalInfo}></General>
+         <General onDataPrep={generalInfo} onClearAction={clearOn}></General>
          <Education onDataPrep={educationInfo}></Education>
          <Experience onDataPrep={practicalInfo}></Experience>
          <Skills onDataPrep={skillsInfo}></Skills>
-         <Preview onClick={overHandler}></Preview>
+         <Preview onClick={overHandler} onClear={clearHandler}></Preview>
          {over && <Overlay onClick={hideHandler} data={data}></Overlay>}
       </Wrapper>
    );

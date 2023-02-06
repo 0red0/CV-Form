@@ -35,6 +35,18 @@ export default function General(props) {
       props.onDataPrep(name, age, phone, email);
    }
 
+   if (props.onClearAction === true) {
+      console.log(props.onClearAction);
+      console.log(typeof props.onClearAction);
+      setAge("");
+      setName("");
+      setEmail("");
+      setPhone("");
+      return;
+   }
+   // }
+   // props.onClear(setAge(""), setName(""), setEmail(""), setPhone(""));
+
    return (
       <Card>
          <h2>General Information</h2>
