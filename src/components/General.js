@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../components/UI/Card";
 import styles from "./General.module.css";
 
@@ -35,15 +35,18 @@ export default function General(props) {
       props.onDataPrep(name, age, phone, email);
    }
 
-   if (props.onClearAction === true) {
-      console.log(props.onClearAction);
-      console.log(typeof props.onClearAction);
-      setAge("");
-      setName("");
-      setEmail("");
-      setPhone("");
-      return;
-   }
+   // console.log(props.onClearAction);
+   // console.log(typeof props.onClearAction);
+   useEffect(() => {
+      if (props.onClearAction === true) {
+         setAge("");
+         setName("");
+         setEmail("");
+         setPhone("");
+      }
+   }, [props.onClearAction]);
+   // return;
+
    // }
    // props.onClear(setAge(""), setName(""), setEmail(""), setPhone(""));
 
